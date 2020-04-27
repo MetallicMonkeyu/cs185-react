@@ -1,0 +1,148 @@
+/*change the fond about nav-bar*/
+
+
+
+.home{
+    padding:20px;
+	display: flex;
+    justify-content: center;
+}
+
+.home img{
+  width: 400px;
+   height: 50;
+  
+}
+
+.gallary{
+  padding:20px;
+
+}
+
+.images{
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  display: grid;
+  grid-gap: 4rem;
+}
+
+.videoslayout{
+  width:100%;
+  height:100%;
+  padding: 1vmin;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  grid-gap: 1rem;
+}
+
+.videoslayout video{
+  margin: auto;
+  
+  width:400px ;
+  height:200px;
+}
+
+.videoslayout iframe{
+  margin: auto;
+  
+  width:400px ;
+  height:200px;
+}
+
+
+
+.vid{
+ padding: 20px;
+}
+
+.videosP {
+  display: grid;
+  padding: 10px;
+  grid-gap: 4rem;
+}
+
+.videos{
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  /*display: flex;*/
+}
+
+
+.projects{
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+}
+
+.exlinks{
+  display: flex;
+}
+
+.projectName{
+  text-align: center;
+  display: table-cell;
+  margin: 20px 0;
+  padding: 10px;
+  border: 10px;
+  vertical-align: middle;
+}
+
+.exlinks span {
+  margin-left : 35px
+}
+
+/* div.exlinks{  
+  display: flex;
+  text-align: center;
+  padding: 20px 5%;
+  float: left;
+  text-decoration: none;
+} */
+
+.exlinks > div{
+  padding: 10px;
+}
+
+.exlinks img{
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ....TO TOP css file>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.bar {
+  font-family: sans-serif;
+  padding: 1rem 5rem;
+}
+
+.description{
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+
+  background-color: #f60f1a;
+  color: white;
+  padding: 17px;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 19px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

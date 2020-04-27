@@ -1,0 +1,30 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Page from './App.js';
+import ScrollToTopBtn from "./Components/scroll";
+
+import * as serviceWorker from './serviceWorker';
+
+
+function Top() {
+  return (
+    <div className="bar">
+      <Page />
+      <ScrollToTopBtn />
+    </div>
+  );
+}
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Top />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

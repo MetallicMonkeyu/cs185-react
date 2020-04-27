@@ -1,0 +1,42 @@
+body {
+  background:#d7d1ca;
+
+}
+
+.header{
+  text-align: center;
+  background-color:rgb(191, 215, 228);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+}
+.navheader{
+  
+  background:  #eddde9;
+  display: flex;
+  justify-content: left;
+}
+
+
+
+
+/*tabs in navigation bar*/
+.tab{
+  color: white;
+  text-align: center;
+  padding: 3px 13px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.tab >a:hover{
+  
+  background: rgb(240, 149, 205);
+  color: black;
+}
+
+.table{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
