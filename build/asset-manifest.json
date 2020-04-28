@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/cs185-react/static/css/main.791f7948.chunk.css",
+    "main.js": "/cs185-react/static/js/main.ba499895.chunk.js",
+    "main.js.map": "/cs185-react/static/js/main.ba499895.chunk.js.map",
+    "runtime-main.js": "/cs185-react/static/js/runtime-main.e0d4b5c4.js",
+    "runtime-main.js.map": "/cs185-react/static/js/runtime-main.e0d4b5c4.js.map",
+    "static/js/2.6dec0129.chunk.js": "/cs185-react/static/js/2.6dec0129.chunk.js",
+    "static/js/2.6dec0129.chunk.js.map": "/cs185-react/static/js/2.6dec0129.chunk.js.map",
+    "index.html": "/cs185-react/index.html",
+    "precache-manifest.bb96dcc7cf46eb3d06550e7f80004472.js": "/cs185-react/precache-manifest.bb96dcc7cf46eb3d06550e7f80004472.js",
+    "service-worker.js": "/cs185-react/service-worker.js",
+    "static/css/main.791f7948.chunk.css.map": "/cs185-react/static/css/main.791f7948.chunk.css.map",
+    "static/js/2.6dec0129.chunk.js.LICENSE.txt": "/cs185-react/static/js/2.6dec0129.chunk.js.LICENSE.txt",
+    "static/media/LOL_replay1.webm": "/cs185-react/static/media/LOL_replay1.6489c8fa.webm",
+    "static/media/LOL_replay2.webm": "/cs185-react/static/media/LOL_replay2.e8444f33.webm",
+    "static/media/LOL_replay3.webm": "/cs185-react/static/media/LOL_replay3.6c68e80e.webm",
+    "static/media/Snake.png": "/cs185-react/static/media/Snake.642a37ec.png",
+    "static/media/View1.jpg": "/cs185-react/static/media/View1.f1454132.jpg",
+    "static/media/View10.jpg": "/cs185-react/static/media/View10.2a57b4f3.jpg",
+    "static/media/View3.jpg": "/cs185-react/static/media/View3.269a98a7.jpg",
+    "static/media/View4.jpg": "/cs185-react/static/media/View4.a47855c1.jpg",
+    "static/media/View5.jpg": "/cs185-react/static/media/View5.dd65c52a.jpg",
+    "static/media/View6.jpg": "/cs185-react/static/media/View6.a6aafe35.jpg",
+    "static/media/View7.jpg": "/cs185-react/static/media/View7.d6b71375.jpg",
+    "static/media/View8.jpg": "/cs185-react/static/media/View8.3c122875.jpg",
+    "static/media/View9.jpg": "/cs185-react/static/media/View9.212f0c43.jpg",
+    "static/media/android.png": "/cs185-react/static/media/android.250b231d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0d4b5c4.js",
+    "static/js/2.6dec0129.chunk.js",
+    "static/css/main.791f7948.chunk.css",
+    "static/js/main.ba499895.chunk.js"
+  ]
+}
