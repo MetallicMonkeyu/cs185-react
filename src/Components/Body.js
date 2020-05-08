@@ -3,6 +3,8 @@ import Home from './Home'
 import Images from './Images'
 import Videos from './Videos'
 import Projects from './Projects'
+import Form from './Form'
+
 
 
 export class Body extends Component{
@@ -16,8 +18,10 @@ export class Body extends Component{
 
 		else if (activeTab==3)
 			return <Videos/>
-		else
+		else if (activeTab == 4)
 			return <Projects/>
+		else
+			return <Form/>
 
 	}
   render(){
