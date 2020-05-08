@@ -1,4 +1,3 @@
- // my component is hover the images when the mouse on it
 import React, { Component } from 'react';
 import { SRLWrapper } from "simple-react-lightbox"; // Import SRLWrapper
 
