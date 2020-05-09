@@ -4,6 +4,9 @@ import view1 from '../image/View1.jpg'
 
 
 export class Home extends Component{
+	componentDidMount(){
+		document.title = 'Shengjia Homepage';
+	}
   render(){
 
     return (

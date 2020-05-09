@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cs185-react/static/css/main.582227c3.chunk.css",
-    "main.js": "/cs185-react/static/js/main.f5c50819.chunk.js",
-    "main.js.map": "/cs185-react/static/js/main.f5c50819.chunk.js.map",
+    "main.css": "/cs185-react/static/css/main.c80de07f.chunk.css",
+    "main.js": "/cs185-react/static/js/main.9a45c317.chunk.js",
+    "main.js.map": "/cs185-react/static/js/main.9a45c317.chunk.js.map",
     "runtime-main.js": "/cs185-react/static/js/runtime-main.e0d4b5c4.js",
     "runtime-main.js.map": "/cs185-react/static/js/runtime-main.e0d4b5c4.js.map",
     "static/js/2.344e4e6f.chunk.js": "/cs185-react/static/js/2.344e4e6f.chunk.js",
     "static/js/2.344e4e6f.chunk.js.map": "/cs185-react/static/js/2.344e4e6f.chunk.js.map",
     "index.html": "/cs185-react/index.html",
-    "precache-manifest.49397016c3cb06b7c1628c4eac5d694b.js": "/cs185-react/precache-manifest.49397016c3cb06b7c1628c4eac5d694b.js",
+    "precache-manifest.dfb90efa49c87d57efec2e55ca889af0.js": "/cs185-react/precache-manifest.dfb90efa49c87d57efec2e55ca889af0.js",
     "service-worker.js": "/cs185-react/service-worker.js",
-    "static/css/main.582227c3.chunk.css.map": "/cs185-react/static/css/main.582227c3.chunk.css.map",
+    "static/css/main.c80de07f.chunk.css.map": "/cs185-react/static/css/main.c80de07f.chunk.css.map",
     "static/js/2.344e4e6f.chunk.js.LICENSE.txt": "/cs185-react/static/js/2.344e4e6f.chunk.js.LICENSE.txt",
     "static/media/LOL_replay1.webm": "/cs185-react/static/media/LOL_replay1.6489c8fa.webm",
     "static/media/LOL_replay2.webm": "/cs185-react/static/media/LOL_replay2.e8444f33.webm",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.e0d4b5c4.js",
     "static/js/2.344e4e6f.chunk.js",
-    "static/css/main.582227c3.chunk.css",
-    "static/js/main.f5c50819.chunk.js"
+    "static/css/main.c80de07f.chunk.css",
+    "static/js/main.9a45c317.chunk.js"
   ]
 }
