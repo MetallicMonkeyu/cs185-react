@@ -5,6 +5,9 @@ import video3 from '../video/LOL_replay3.webm'
 
 
 export class Videos extends Component{
+  componentDidMount(){
+		document.title = 'Shengjia Videos';
+	}
   render(){
 
     return (

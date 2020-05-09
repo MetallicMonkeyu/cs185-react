@@ -6,6 +6,9 @@ import proj2 from '../project/Snake.png'
 
 
 export class Projects extends Component{
+	componentDidMount(){
+		document.title = 'Shengjia Projects';
+	}
   render(){
 
     return (

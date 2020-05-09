@@ -4,6 +4,9 @@ import MyComponent from "./MyComponent";
 import SimpleReactLightbox from "simple-react-lightbox";
 
 export class Images extends Component{
+	componentDidMount(){
+		document.title = 'Shengjia Gallery';
+	}
   render(){
 
     return (
