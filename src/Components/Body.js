@@ -4,6 +4,7 @@ import Images from './Images'
 import Videos from './Videos'
 import Projects from './Projects'
 import Form from './Form'
+import Movies from './Movies';
 
 
 
@@ -20,8 +21,10 @@ export class Body extends Component{
 			return <Videos/>
 		else if (activeTab == 4)
 			return <Projects/>
-		else
+		else if (activeTab == 5)
 			return <Form/>
+		else
+			return <Movies/>
 
 	}
   render(){
