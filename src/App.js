@@ -41,6 +41,10 @@ export class App extends Component{
     {
       id:5,
       title: 'Guest Form'
+    },
+    {
+      id:6,
+      title: 'Favorite movies'
     }
 
     ]

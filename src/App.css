@@ -152,4 +152,62 @@ input[type="radio"] {
 
 h2{
    text-align: center;
+
+}
+
+}
+
+.movie {
+  width: 330px;
+  height: 500px;
+	padding: 1em;
+	cursor: pointer;
+}
+
+.movLightboxContainer {
+  width: 750px;
+  margin: auto;
+  max-width: 850px;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  display: flex;
+  flex-direction: row;
+}
+
+.movLightboxImage {
+  height: 100%;
+  margin: auto;
+  float: left;
+  outline-offset: -5px;
+}
+
+.title {
+  color: #2F4F4D;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.director {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.rating {
+  background-color: rgb(231, 208, 75);
+  border: 1px soli  rgb(231, 208, 75);
+  color: #222;
+  padding: 8px 24px 8px 24px;
+  font-weight: bold;
+}
+
+.movLightboxContent {
+  height: 100%;
+  background-color: #FFF;
+  margin: auto;
+  padding: 0px 30px;
+  float: right;
+  max-width: 850px;
+  color: #555;
+
 }

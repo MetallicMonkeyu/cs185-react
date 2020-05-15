@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/cs185-react/static/css/main.c80de07f.chunk.css",
-    "main.js": "/cs185-react/static/js/main.9a45c317.chunk.js",
-    "main.js.map": "/cs185-react/static/js/main.9a45c317.chunk.js.map",
+    "main.css": "/cs185-react/static/css/main.ab0b0590.chunk.css",
+    "main.js": "/cs185-react/static/js/main.bfde55f5.chunk.js",
+    "main.js.map": "/cs185-react/static/js/main.bfde55f5.chunk.js.map",
     "runtime-main.js": "/cs185-react/static/js/runtime-main.e0d4b5c4.js",
     "runtime-main.js.map": "/cs185-react/static/js/runtime-main.e0d4b5c4.js.map",
-    "static/js/2.344e4e6f.chunk.js": "/cs185-react/static/js/2.344e4e6f.chunk.js",
-    "static/js/2.344e4e6f.chunk.js.map": "/cs185-react/static/js/2.344e4e6f.chunk.js.map",
+    "static/css/2.ccab356c.chunk.css": "/cs185-react/static/css/2.ccab356c.chunk.css",
+    "static/js/2.dd77d61c.chunk.js": "/cs185-react/static/js/2.dd77d61c.chunk.js",
+    "static/js/2.dd77d61c.chunk.js.map": "/cs185-react/static/js/2.dd77d61c.chunk.js.map",
     "index.html": "/cs185-react/index.html",
-    "precache-manifest.dfb90efa49c87d57efec2e55ca889af0.js": "/cs185-react/precache-manifest.dfb90efa49c87d57efec2e55ca889af0.js",
+    "precache-manifest.ca851e09e5b03161c3a3861496934e6a.js": "/cs185-react/precache-manifest.ca851e09e5b03161c3a3861496934e6a.js",
     "service-worker.js": "/cs185-react/service-worker.js",
-    "static/css/main.c80de07f.chunk.css.map": "/cs185-react/static/css/main.c80de07f.chunk.css.map",
-    "static/js/2.344e4e6f.chunk.js.LICENSE.txt": "/cs185-react/static/js/2.344e4e6f.chunk.js.LICENSE.txt",
+    "static/css/2.ccab356c.chunk.css.map": "/cs185-react/static/css/2.ccab356c.chunk.css.map",
+    "static/css/main.ab0b0590.chunk.css.map": "/cs185-react/static/css/main.ab0b0590.chunk.css.map",
+    "static/js/2.dd77d61c.chunk.js.LICENSE.txt": "/cs185-react/static/js/2.dd77d61c.chunk.js.LICENSE.txt",
     "static/media/LOL_replay1.webm": "/cs185-react/static/media/LOL_replay1.6489c8fa.webm",
     "static/media/LOL_replay2.webm": "/cs185-react/static/media/LOL_replay2.e8444f33.webm",
     "static/media/LOL_replay3.webm": "/cs185-react/static/media/LOL_replay3.6c68e80e.webm",
@@ -29,8 +31,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e0d4b5c4.js",
-    "static/js/2.344e4e6f.chunk.js",
-    "static/css/main.c80de07f.chunk.css",
-    "static/js/main.9a45c317.chunk.js"
+    "static/css/2.ccab356c.chunk.css",
+    "static/js/2.dd77d61c.chunk.js",
+    "static/css/main.ab0b0590.chunk.css",
+    "static/js/main.bfde55f5.chunk.js"
   ]
 }
