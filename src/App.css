@@ -156,8 +156,6 @@ input[type="radio"] {
 
 h2{
    text-align: center;
-<<<<<<< Updated upstream
-=======
 }
 
 .movie {
@@ -212,5 +210,4 @@ h2{
   float: right;
   max-width: 850px;
   color: #555;
->>>>>>> Stashed changes
 }
