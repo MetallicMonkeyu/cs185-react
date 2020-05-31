@@ -17,6 +17,7 @@ export class App extends Component{
       })
     }
   }
+  
   render(){
     const tabs = [
     {
@@ -44,9 +45,12 @@ export class App extends Component{
     },
     {
       id:6,
-      title: 'Favorite movies'
+      title: 'Favorite Movies'
+    },
+    {
+      id:7,
+      title: 'Add Movie'
     }
-
     ]
 
 

@@ -156,7 +156,14 @@ input[type="radio"] {
 
 h2{
    text-align: center;
+<<<<<<< Updated upstream
 }
+=======
+
+}
+
+
+>>>>>>> Stashed changes
 
 .movie {
   width: 330px;
@@ -166,9 +173,9 @@ h2{
 }
 
 .movLightboxContainer {
-  width: 750px;
+  width: 850px;
   margin: auto;
-  max-width: 850px;
+  max-width: 950px;
   background-color: #FFF;
   border: 5px solid #FFF;
   display: flex;
@@ -210,4 +217,156 @@ h2{
   float: right;
   max-width: 850px;
   color: #555;
+}
+
+.movie-forms {
+	display: flex;
+  justify-content: space-between;
+  float: center;
+  flex-flow: row wrap;
+  width:100%;
+  background:rgb(191, 215, 228);
+  
+}
+
+.movie-add-forms {
+  display: flex;
+  float:right;
+  flex-flow: row wrap;
+  align-items: center;
+  
+}
+
+.movie-form > div {
+  
+  float: center;
+	position: relative;
+	margin-top: 1.5em;
+	padding: 0.5em;
+	padding-right: 5em;
+	width: 250px;
+}
+
+
+
+.movie-form > div > label {
+  float: left;
+    margin-right: 5px;
+}
+
+.movie-form > div > div{
+    overflow: hidden;
+}
+
+.movie-form > div > input {
+  flex-direction: row;
+  font-size: 16px;
+  width: 100%;
+    
+    display: block
+}
+
+.dropdown {
+  margin: 2.5em;
+  float: left;
+  border: 2px solid black;
+}
+
+select {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+	border: 0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+    height: 50px;
+    background:  transparent;
+    -webkit-appearance: none;
+    background-position-x: 175px;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+select:focus {
+	outline: black;
+	outline-style: solid;
+	outline-width: 1px;
+}
+
+.moviePoster {
+	width: 330px;
+  height: 500px;
+	padding: 1em;
+  cursor: pointer;
+
+}
+
+
+.delete-button-add {
+	
+	left: 150px;
+	background-color: rgb(238, 59, 59);
+	width: 100px;
+	height: 50px;
+}
+
+.form-input-text:focus ~ span,
+.form-input-text:not(:focus):required:valid ~ span,
+.form-input-text:not(:focus):optional:not(:placeholder-shown) ~ span,
+textarea:focus ~ span,
+textarea:not(:focus):required:valid ~ span,
+textarea:not(:focus):optional:not(:placeholder-shown) ~ span {
+	top: -15px;
+	left: 10px;
+	font-size: 13px;
+	opacity: 1;
+}
+
+.form-input-text, textarea {
+	width: 100%;
+	border: none;
+	padding-bottom: 10px;
+	border-bottom: solid 1px black;
+	transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 98%, black 4%);
+	background-position: -1000px 0;
+	background-repeat: no-repeat;
+	font-size: 16px;
+}
+
+.form-input-text:focus, textarea:focus {
+	box-shadow: none;
+	outline: none;
+	background-position: 0 0;
+}
+
+.button{
+  text-align: center;
+  
+}
+
+.button:hover{
+  background-color: var(--color-3);
+  float: center;
+  
+}
+
+.but{
+  font-style: none;
+  font-size: 40px;
+  text-decoration: none;
+  color: rgb(227, 248, 33);
+  
+  background-color: var(--color-2);
+  padding: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 50%;
+  margin: 8px;
+  transition: 0.2s;
+
 }

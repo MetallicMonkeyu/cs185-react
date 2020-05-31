@@ -9,9 +9,12 @@ export class Movies extends Component {
 	constructor() {
 		super();
 		this.state = {
-			movies: []
+			movies: [],
+			
+			
 		};
 		this.wrapper = React.createRef();
+		this.moviesScroll = React.createRef();
 	}
 
 	componentDidMount() {
