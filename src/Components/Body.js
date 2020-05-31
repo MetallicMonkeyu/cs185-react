@@ -5,6 +5,7 @@ import Videos from './Videos'
 import Projects from './Projects'
 import Form from './Form'
 import Movies from './Movies';
+import AddMovie from './AddMovie';
 
 
 
@@ -13,7 +14,8 @@ export class Body extends Component{
 		var activeTab = this.props.activeTab
 
 		if(activeTab===1)
-			return <Home/>
+		
+			return <Home/>;
 		else if (activeTab==2)
 			return <Images/>
 
@@ -23,10 +25,13 @@ export class Body extends Component{
 			return <Projects/>
 		else if (activeTab == 5)
 			return <Form/>
-		else
+		else if (activeTab == 6)
 			return <Movies/>
+		else 
+			return <AddMovie/>
 
 	}
+	 
   render(){
 
     return (this.displayContent());
