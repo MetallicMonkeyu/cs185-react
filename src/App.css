@@ -17,10 +17,6 @@ body {
   justify-content: left;
 }
 
-
-
-
-/*tabs in navigation bar*/
 .tab{
   color: white;
   text-align: center;
@@ -156,14 +152,10 @@ input[type="radio"] {
 
 h2{
    text-align: center;
-<<<<<<< Updated upstream
-}
-=======
 
 }
 
 
->>>>>>> Stashed changes
 
 .movie {
   width: 330px;
@@ -217,7 +209,9 @@ h2{
   float: right;
   max-width: 850px;
   color: #555;
+
 }
+
 
 .movie-forms {
 	display: flex;
@@ -369,10 +363,9 @@ textarea:not(:focus):optional:not(:placeholder-shown) ~ span {
   margin: 8px;
   transition: 0.2s;
 
-<<<<<<< Updated upstream
+
 }
-=======
-}
+
 
 .add-to-graph-button {
 	left: 150px;
@@ -380,5 +373,3 @@ textarea:not(:focus):optional:not(:placeholder-shown) ~ span {
 	width: 100px;
 	height: 50px;
 }
-
->>>>>>> Stashed changes
