@@ -369,4 +369,16 @@ textarea:not(:focus):optional:not(:placeholder-shown) ~ span {
   margin: 8px;
   transition: 0.2s;
 
+<<<<<<< Updated upstream
 }
+=======
+}
+
+.add-to-graph-button {
+	left: 150px;
+	background-color: rgb(243, 246, 19);
+	width: 100px;
+	height: 50px;
+}
+
+>>>>>>> Stashed changes
