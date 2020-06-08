@@ -22,7 +22,7 @@ export class AddMovie extends Component {
 			addToListName: 'Add to List',
 			currentList: {id: '', name: 'All'},
 			searchQuery: '',
-            filteredMovies: [],
+            graphList: [],
             maxLoaded: false
 		};
 		this.wrapper = React.createRef();
@@ -53,6 +53,7 @@ export class AddMovie extends Component {
 			});
 		});
 
+		//new
 		ref = firebase.database().ref('movie-lists');
 		ref.orderByKey().on('value', snapshot => {
 			if (!snapshot.val()) return;
@@ -68,6 +69,35 @@ export class AddMovie extends Component {
 				movieListPairs: movieLists
 			});
 		});
+		ref = firebase.database().ref('graph');
+		ref.on('movieChild', snapshot => {
+			let movie = snapshot.val();
+
+			let movies = this.state.graphList;
+			movies.push(movie);
+
+			this.setState({
+				'graphList': movies
+			});
+		});
+		ref.on('child_removed', snapshot => {
+			let movie = snapshot.val();
+
+			let movies = this.state.graphList;
+			for (let i = 0; i < movies.length; i++) {
+				if (movies[i].id === movie.id) {
+					movies.splice(i, 1);
+					break;
+				}
+			}
+
+			this.setState({
+				'graphList': movies
+			});
+
+		});
+		//new
+
 
     }
     // componentWillUnmount() {
@@ -81,7 +111,7 @@ export class AddMovie extends Component {
 				.orderByChild('title')
 				.limitToFirst(this.state.moviesToLoad);
 			
-			ref.on('child_added', snapshot => {
+			ref.on('movieChild', snapshot => {
 				let movie = snapshot.val();
 				let last = movie.title;
 				// console.log(movie);
@@ -98,7 +128,7 @@ export class AddMovie extends Component {
 			});
 		}
 
-		let movieIDs = this.getIDsInList();
+		let movieIDs = this.getID();
 		
 		movieIDs.forEach(movieID => {
 			let ref = firebase.database()
@@ -107,7 +137,7 @@ export class AddMovie extends Component {
 				.equalTo(movieID)
 				.limitToFirst(1);
 
-			ref.on('child_added', snapshot => {
+			ref.on('movieChild', snapshot => {
 				let movie = snapshot.val();
 				let last = movie.title;
 	
@@ -147,9 +177,9 @@ export class AddMovie extends Component {
 			.limitToFirst(this.state.moviesToLoad + 1);
 
 		let movieIDs = [];
-		if (this.state.currentList.name !== 'All') movieIDs = this.getIDsInList();
+		if (this.state.currentList.name !== 'All') movieIDs = this.getID();
 
-		ref.on('child_added', snapshot => {
+		ref.on('movieChild', snapshot => {
 			const movie = snapshot.val();
 
 			let duplicate = false;
@@ -215,7 +245,9 @@ export class AddMovie extends Component {
 				movie.year = response.data.Year;
 				movie.plot = response.data.Plot;
 				movie.rating = response.data.imdbRating;
-                movie.poster = response.data.Poster;
+				movie.poster = response.data.Poster;
+				movie.actors = response.data.Actors.split(', ');
+
                 firebase.database().ref('movies').push().set(movie);
 				
 			});
@@ -255,7 +287,8 @@ export class AddMovie extends Component {
 			movie.year = response.data.Year;
 			movie.plot = response.data.Plot;
             movie.rating = response.data.imdbRating;
-            movie.poster = response.data.Poster;
+			movie.poster = response.data.Poster;
+			movie.actors = response.data.Actors.split(', ');
             firebase.database().ref('movies').push().set(movie);
             window.scrollTo({
                 top: document.body.scrollHeight,
@@ -294,7 +327,7 @@ export class AddMovie extends Component {
 		firebase.database().ref().update(updates);
 	}
 
-	getUpdateLists = () => {
+	getupdatess = () => {
 		return Object.entries(this.state.lists).map(list => (
 			<option key={list[0]}
 				value={list[0]}>{list[1]}</option>
@@ -308,7 +341,7 @@ export class AddMovie extends Component {
 		));
 	}
 
-	updateList = (event) => {
+	updates = (event) => {
 		let listName = '';
 		if (event.target.value === '') {
 			listName = 'All';
@@ -326,7 +359,7 @@ export class AddMovie extends Component {
 		this.forceUpdate(this.loadMovies);
 	}
 
-	addToList = (event, movieID) => {
+	addToList = (event, movieID, movieClass) => {
 		let listID = event.target.value;
 		let duplicate = false;
 		this.state.movieListPairs.forEach(movieListPair => {
@@ -337,14 +370,17 @@ export class AddMovie extends Component {
 			alert('Movie already in the selected list!');
 			return;
 		};
+
+		alert('Added ' + movieID + ' to ' +  this.state.lists[event.target.value]);
 		
-		let ref = firebase.database().ref('movie-lists');
-		ref.push().set({[listID]: movieID});
-        alert('Added ' + movieID + ' to ' +  this.state.lists[event.target.value]);
+		if (this.state.lists[event.target.value] == "GraphViz"){
+			this.addGraph(movieClass)
+			alert('Now you can find ' + movieClass.title + " in Graph!" );
+		};
 		
 	}
 
-	getIDsInList = () => {
+	getID = () => {
 		let movieIDs = [];
 		this.state.movieListPairs.forEach(movieListPair => {
 			if (movieListPair.search(this.state.currentList.id) > -1) {
@@ -359,11 +395,37 @@ export class AddMovie extends Component {
 		event.preventDefault();
 	}
 
+	checkGraphMovie = (id) => {
+		let movies = this.state.graphList;
+		for (let i = 0; i < movies.length; i++) {
+			if (movies[i].id === id) return true;
+		}
+		return false;
+	}
+
+	addGraph = (movie) => {		
+		let exists = this.checkGraphMovie(movie.id);
+		
+		if (exists) {
+			let ref = firebase.database().ref('graph');
+			let removeMovie = ref.orderByChild('id').equalTo(movie.id).limitToFirst(1).on('movieChild', snapshot => {
+				ref.child(snapshot.key).remove();
+			});
+			ref.off('movieChild', removeMovie);
+		} else {
+			console.log(movie.title);
+			alert('Current movie is not in graph');
+
+			firebase.database().ref('graph').push().set(movie);
+		}
+		this.displayLightbox(movie);
+	}
+
 	deleteMovie = (movieID) => {
 		console.log('deleteMovie');
 		let ref = firebase.database().ref('movies');
 		
-		ref.orderByChild('id').equalTo(movieID).limitToFirst(1).on('child_added', snapshot => {
+		ref.orderByChild('id').equalTo(movieID).limitToFirst(1).on('movieChild', snapshot => {
 			console.log(snapshot.key);
 			ref.child(snapshot.key).remove();
 		});
@@ -431,18 +493,20 @@ export class AddMovie extends Component {
                     <br></br>
 					<br></br>
                     <div>
-						<select className="dropdown" value={this.state.addToListName} onChange={event => {this.addToList(event, movie.id)}}>
+						<select className="dropdown" value={this.state.addToListName} onChange={event => {this.addToList(event, movie.id, movie)}}>
 							<option hidden value="">Add to List</option>
                              {this.getAddToLists(movie.id)}
                              
                         </select>
-                        
-                        
-			 			
+
 			 		</div>
                     <br></br>
 					<br></br>
-                    <div>
+					<div>
+					<button className="add-to-graph-button" onClick={() => this.addGraph(movie)}>
+							{this.checkGraphMovie(movie.id) ? 'Remove from Graph' : 'Checking in graph'}
+					</button>
+                    
                         <button className="delete-button-add" onClick={() => {this.deleteMovie(movie.id)}}>Delete From Collection</button>
                     </div>
 	
@@ -473,9 +537,9 @@ export class AddMovie extends Component {
 				
 				<div className="movie-forms">
                     <div className="dropdown">
-							<select  onChange={this.updateList} >
+							<select  onChange={this.updates} >
 								<option value="">All</option>
-                                {this.getUpdateLists()}
+                                {this.getupdatess()}
                                 
                             </select>
                             

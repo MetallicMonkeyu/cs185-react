@@ -6,6 +6,7 @@ import Projects from './Projects'
 import Form from './Form'
 import Movies from './Movies';
 import AddMovie from './AddMovie';
+import Graph from './Graph';
 
 
 
@@ -27,8 +28,10 @@ export class Body extends Component{
 			return <Form/>
 		else if (activeTab == 6)
 			return <Movies/>
-		else 
+		else if (activeTab == 7)
 			return <AddMovie/>
+		else
+			return <Graph/>
 
 	}
 	 
