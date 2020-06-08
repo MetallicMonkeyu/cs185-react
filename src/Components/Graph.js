@@ -142,9 +142,9 @@ export class Graph extends Component {
     }
     
     componentDidMount() {
-	    	document.title = 'Movie Graph';
+	  document.title = 'Movie Graph';
 
-	    	
+
 		if (!firebase.apps.length) {
 			firebase.initializeApp(config);
 		}
