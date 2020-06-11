@@ -503,7 +503,7 @@ export class AddMovie extends Component {
                     <br></br>
 					<br></br>
 					<div>
-					<button className="add-to-graph-button" onClick={() => this.addGraph(movie)}>
+					<button className="add-to-graph-button">
 							{this.checkGraphMovie(movie.id) ? 'Remove from Graph' : 'Checking in graph'}
 					</button>
                     
